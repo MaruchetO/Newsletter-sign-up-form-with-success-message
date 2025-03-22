@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Primary */
+  --Red: hsl(4, 100%, 67%);
+  /* Neutral */
+  --Blue-800: hsl(234, 29%, 20%);
+  --Blue-700: hsl(235, 18%, 26%);
+  --Grey: hsl(0, 0%, 58%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
+  color: var(--Blue-800);
+  font-size: 13px;
+}
+
+.container {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: row;
+  border-radius: 40px;
+}
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 360px;
+  margin-inline: 60px;
+}
+.title {
+  font-size: 3.375rem;
+  margin-bottom: 18px;
+}
+.description,
+.list-text {
+  font-size: 1rem;
+}
+.description {
+  line-height: 1.5;
+  margin-bottom: 26px;
+}
+.list-section {
+  margin-bottom: 30px;
+}
+.list {
+  display: flex;
+  align-items: start;
+  margin-bottom: 12px;
+}
+.list-icon {
+  margin-right: 12px;
+}
+.list-text {
+  line-height: 1.5;
+}
+form {
+  position: relative;
+}
+label {
+  font-weight: 700;
+}
+input {
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--Grey);
+  margin-top: 10px;
+  margin-bottom: 24px;
+  width: 370px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+input:invalid {
+  border: 1px solid rgb(214, 88, 49);
+  background-color: rgba(252, 105, 62, 0.1);
+  color: rgb(252, 105, 62);
+}
+input:focus:invalid {
+  outline: none;
+}
+.error {
+}
+
+.active {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 255px;
+  white-space: nowrap;
+  color: rgb(252, 105, 62);
+  font-weight: 500;
+}
+
+.subscribe-button {
+  width: 370px;
+  padding: 18px;
+  background-color: var(--Blue-800);
+  color: var(--White);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.subscribe-button:hover {
+  /* https://www.w3schools.com/css/css3_gradients.asp */
+  background-image: linear-gradient(to right, #ff5c6a, #fc693e);
+  box-shadow: 0px 10px 30px rgba(255, 92, 106, 0.5);
+}
+
+.photo {
+  object-fit: cover;
+  margin: 24px 24px 21px;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  color: #aab2c4;
+}
+.attribution a {
+  color: #9d8e72;
+  font-size: 11px;
+}
+
+@media (max-width: 960px) {
+  body {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  .container {
+    width: 375px;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 0px;
+  }
+
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 335px;
+    margin-inline: 20px;
+  }
+  .title {
+    font-size: 2.625rem;
+    margin-top: 36px;
+    margin-bottom: 18px;
+  }
+  input {
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid var(--Grey);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 335px;
+  }
+  .active {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 215px;
+    white-space: nowrap;
+    color: rgb(252, 105, 62);
+    font-weight: 500;
+  }
+  .subscribe-button {
+    width: 335px;
+    padding: 18px;
+    background-color: var(--Blue-800);
+    color: var(--White);
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo {
+    width: 375px;
+    object-fit: cover;
+    margin: 0px;
+  }
+
+  /* Attribution */
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    color: black;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+    font-size: 11px;
+  }
+}
